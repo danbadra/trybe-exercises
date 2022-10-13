@@ -1,3 +1,4 @@
 # trybe-exercises
-All exercises done during the Trybe web development course.
-Meu repositório de exercícios.
+Wellcome!
+
+In this repository, I'll post all exercises done during the Trybe web development course.
