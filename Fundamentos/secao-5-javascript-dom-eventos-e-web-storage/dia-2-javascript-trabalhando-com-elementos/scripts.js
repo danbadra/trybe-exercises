@@ -63,27 +63,47 @@
 
 //  Exercícios 2
 
-// Crie um irmão para elementoOndeVoceEsta.
+// // Crie um irmão para elementoOndeVoceEsta.
 
-const pai = document.getElementById("pai");
-const irmaoElementoOndeVoceEsta = document.createElement("section");
-irmaoElementoOndeVoceEsta.id = "irmaoElementoOndeVoceEsta"
-pai.appendChild(irmaoElementoOndeVoceEsta);
+// const pai = document.getElementById("pai");
+// const irmaoElementoOndeVoceEsta = document.createElement("section");
+// irmaoElementoOndeVoceEsta.id = "irmaoElementoOndeVoceEsta"
+// pai.appendChild(irmaoElementoOndeVoceEsta);
 
-// Crie um filho para elementoOndeVoceEsta.
+// // Crie um filho para elementoOndeVoceEsta.
 
-const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
-const filhoElementoOndeVoceEsta = document.createElement("div");
-filhoElementoOndeVoceEsta.id = "filhoElementoOndeVoceEsta"
-elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+// const elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+// const filhoElementoOndeVoceEsta = document.createElement("div");
+// filhoElementoOndeVoceEsta.id = "filhoElementoOndeVoceEsta"
+// elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
 
-// Crie um filho para primeiroFilhoDoFilho.
+// // Crie um filho para primeiroFilhoDoFilho.
 
-const primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
-const primeiroFilhoDoFilhoDoFilho = document.createElement("div");
-primeiroFilhoDoFilhoDoFilho.id = "primeiroFilhoDoFilhoDoFilho"
-primeiroFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilho);
+// const primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
+// const primeiroFilhoDoFilhoDoFilho = document.createElement("div");
+// primeiroFilhoDoFilhoDoFilho.id = "primeiroFilhoDoFilhoDoFilho"
+// primeiroFilhoDoFilho.appendChild(primeiroFilhoDoFilhoDoFilho);
 
-// A partir desse filho criado, acesse terceiroFilho.
+// // A partir desse filho criado, acesse terceiroFilho.
 
-console.log(document.getElementById("primeiroFilhoDoFilhoDoFilho").parentNode.parentNode.nextElementSibling);
+// console.log(document.getElementById("primeiroFilhoDoFilhoDoFilho").parentNode.parentNode.nextElementSibling);
+
+// Exercicios 3
+
+// Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+const pai = document.getElementById('pai');
+
+const todosOsFilhos = pai.childNodes;
+
+    for (let index = todosOsFilhos.length - 1; index >= 0; index -= 1) {
+      const filhoAtual = todosOsFilhos[index];
+
+      if (filhoAtual.id !== 'elementoOndeVoceEsta') {
+        filhoAtual.remove();
+      }
+    }
+
+const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho'); // Recupera o elemento com o id segundoEUltimoFilhoDoFilho
+
+segundoEUltimoFilhoDoFilho.remove(); // Remove o segundo filho do filho
