@@ -1,22 +1,39 @@
-// Exercícios 1
-    // document.getElementById("page-title").innerText = "Game of Thrones";
+// Altera a cor de fundo das tarefas urgentes
 
-    // document.getElementById("second-paragraph").innerText = "Personagens da Série";
+document.getElementById("header-container").style.backgroundColor = "green";
 
-    // const subtitle = document.getElementById("subtitle");
-    // subtitle.innerText = "História da Série";
-    // subtitle.style.padding = "20px";
+let tarefasUrgentes = document.querySelectorAll(".emergency-tasks");
 
-    // const paragraph = document.getElementById("paragraph");
-    // paragraph.style.color = "red";
-
-// Exercicios 2
-document.getElementsByClassName("paragrafo")[0].style.color = "red";
-
-const paragrafos = document.getElementsByClassName("paragrafo");
-
-for(i = 0; i < paragrafos.length; i += 1){
-    paragrafos[i].style.color = "blue";
+for(i = 0; i < tarefasUrgentes.length; i += 1){
+    tarefasUrgentes[i].style.backgroundColor = "salmon";
 }
 
-document.getElementsByTagName("h4")[0].style.color = "orange";
+// Altera a cor de fundo dos subtítulos urgentes
+
+let titulosTarefasUrgentes = document.querySelectorAll(".emergency-tasks h3");
+
+for(i = 0; i < titulosTarefasUrgentes.length; i += 1){
+    titulosTarefasUrgentes[i].style.backgroundColor = "purple";
+}
+
+// Altera a cor de fundo das tarefas não urgentes
+
+let tarefasNaoUrgentes = document.querySelectorAll(".no-emergency-tasks");
+
+for(i = 0; i < tarefasNaoUrgentes.length; i += 1){
+    tarefasNaoUrgentes[i].style.backgroundColor = "yellow";
+}
+
+// Altera a cor de fundo dos subtítulos não urgentes
+
+let titulosTarefasNaoUrgentes = document.querySelectorAll(".no-emergency-tasks h3");
+
+for(i = 0; i < titulosTarefasNaoUrgentes.length; i += 1){
+    titulosTarefasNaoUrgentes[i].style.backgroundColor = "black";
+}
+
+// Altera o backgroundColor do footer
+
+document.getElementsByTagName("footer")[0].style.color = "white";
+document.getElementsByTagName("footer")[0].style.backgroundColor = "darkGrey";
+
