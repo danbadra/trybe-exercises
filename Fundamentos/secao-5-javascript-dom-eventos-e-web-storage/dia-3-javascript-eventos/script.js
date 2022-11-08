@@ -130,10 +130,28 @@ getFridays(decemberFridays);
 // Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // De olho na dica 👀: Você pode utilizar a propriedade event.target.
 
-const zoomIn = () => {}
+const dayMouseOver = () =>{
+    let days = document.querySelector("#days");
+    days.addEventListener('mouseover', event => {
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '600';
+        console.log(event.target);
+        console.log(event.type);
+    })
+}
 
-const zoomOut = () => {}
+const dayMouseOut = () =>{
+    let days = document.querySelector("#days");
+    days.addEventListener('mouseout', event => {
+        event.target.style.fontSize = '20px';
+        event.target.style.fontWeight = '200';
+        console.log(event.target);
+        console.log(event.type);
+    })
+    }
 
+dayMouseOver();
+dayMouseOut();
 
 
 // Parte 7
@@ -143,6 +161,14 @@ const zoomOut = () => {}
 
 
 
+const createTaskSpan = (task) => {
+    let myTasks = document.querySelector('.my-tasks');
+    let newTask = document.createElement('span');
+    newTask.innerText = task; 
+    myTasks.appendChild(newTask);
+}
+
+createTaskSpan('trabalhar no porjeto');
 
 
 
