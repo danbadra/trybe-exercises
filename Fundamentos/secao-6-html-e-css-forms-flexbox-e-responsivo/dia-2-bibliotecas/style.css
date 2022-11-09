@@ -1,0 +1,41 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+body{
+  text-align: center;
+}
+
+main {
+  display: inline-block;
+  border: black solid 1px;
+  padding: 30px;
+}
+
+.header-trybe {
+  display: block;
+  text-align: center;
+  height: 150px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid;
+}
+
+.header-trybe img {
+  margin-top: 12px;
+  height: 70px;
+}
+
+.hotel-form {
+  margin: 25px;
+  color: rgb(73, 73, 73);
+  font-size: 25px;
+}
+
+.obs {
+  box-sizing: content-box;
+  padding: 10px;
+  resize: none;
+  width: 500px;
+  height: 100px;
+}
