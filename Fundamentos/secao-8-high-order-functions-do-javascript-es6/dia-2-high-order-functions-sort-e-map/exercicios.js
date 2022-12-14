@@ -122,8 +122,6 @@ const expectedResult = [
   },
 ];
 
-const nameAndAge = () => {
-  return books.map((bookMapped) => ({author: bookMapped.author.name, age: bookMapped.releaseYear - bookMapped.author.birthYear,})).sort((a, b) => a.age - b.age) 
-};
+const nameAndAge = () => books.map((bookMapped) => ({author: bookMapped.author.name, age: bookMapped.releaseYear - bookMapped.author.birthYear,})).sort((a, b) => a.age - b.age);
 
 console.log(nameAndAge());
